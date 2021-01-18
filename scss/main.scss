@@ -262,11 +262,9 @@ li.decoration {
 @media (max-width: 600px) {
   .title {
     width: 60%;
-
     & h1 {
       font-size: 30px;
     }
-
     & h2 {
       transform: rotate(-20deg);
       left: -30%;
