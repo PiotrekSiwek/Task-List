@@ -1,6 +1,5 @@
 import "../scss/main.scss"
 
-
 class List {
     constructor() {
         this.$add = document.querySelector(".add-form");
@@ -23,7 +22,6 @@ class List {
         const listIndex = this.$list.querySelectorAll("li");
         if (listIndex.length === 0) this.$list.style.visibility = "hidden";
         check.parentElement.parentElement.parentElement.remove();
-
     }
 
     mark(e) {
@@ -35,7 +33,6 @@ class List {
         const check = e.target;
         check.parentElement.parentElement.parentElement.classList.toggle("decoration")
     }
-
 
     task(e) {
         e.preventDefault();
@@ -73,7 +70,6 @@ class List {
         this.$list.style.visibility = "hidden";
     }
 
-
     find(e) {
         const inputText = e.target.value;
         const allLi = [...this.$list.querySelectorAll("li")];
@@ -84,7 +80,6 @@ class List {
 
     addTask() {
         this.$add.addEventListener("submit", this.task.bind(this));
-
     }
 
     clearTasks() {
@@ -95,7 +90,6 @@ class List {
         this.search.addEventListener("input", this.find.bind(this));
     }
 
-
     inputShowHide() {
         this.search.classList.toggle("show");
     }
@@ -103,7 +97,6 @@ class List {
     inputButton(){
         this.$btnSearch.addEventListener("click", this.inputShowHide.bind(this))
     }
-
 }
 
 const myList = new List();
