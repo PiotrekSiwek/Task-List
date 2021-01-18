@@ -215,7 +215,6 @@ li.decoration {
 @media (max-width: 1140px) {
   .title {
     width: 30%;
-
     & h2 {
       transform: rotate(-20deg);
       left: -80%;
@@ -238,7 +237,6 @@ li.decoration {
 @media (max-width: 780px) {
   .title {
     width: 40%;
-
     & h2 {
       transform: rotate(-20deg);
       left: -70%;
@@ -249,11 +247,9 @@ li.decoration {
   .search.show {
     width: 30%;
   }
-
   .add {
     width: 55%;
   }
-
   .tasks-list {
     max-width: 90%;
   }
@@ -281,8 +277,7 @@ li.decoration {
 }
 
 @media (max-width: 400px) {
-  .title
-  {
+  .title {
     & h2 {
       display: none;
     }
