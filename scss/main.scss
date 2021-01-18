@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background: url("../images/painted.jpg") repeat;
+}
+
+.search-form {
+  padding-top: 50px;
+  text-align: right;
+  font-size: 30px;
+}
+
+.search-lens {
+  margin-bottom: 25px;
+  margin-right: 30px;
+  color: black;
+  font-size: 35px;
+}
+
+.move {
+  &:hover {
+    transition: 1s;
+    cursor: pointer;
+    transform: scale(1.2) translate(-20px);
+  }
+}
+
+.search-input {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.search {
+  width: 0;
+  border-radius: 7px 0 0 7px;
+  padding: 10px 20px;
+  border: 2px solid darkgrey;
+  box-shadow: -2px -1px 5px 0 rgba(0, 0, 0, 0.75);
+  visibility: hidden;
+  transition: 1s;
+  position: absolute;
+  right: 0.8%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.search.show {
+  visibility: visible;
+  width: 20%;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background: lightgray;
+  border: 2px solid darkgrey;
+  border-radius: 0 7px 7px 0;
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.75);
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.title {
+  background: #ffffff;
+  width: 20%;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 40px auto 0;
+  box-shadow: 0 -1px 26px 0 rgba(0, 0, 0, 0.75);
+  position: relative;
+
+  & h1 {
+    font-size: 45px;
+    text-align: center;
+    color: black;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  & h2 {
+    transform: rotate(-25deg);
+    position: absolute;
+    left: -170%;
+    top: 20%;
+    font-family: 'Arizonia', cursive;
+    font-size: 45px;
+  }
+}
+
+.add {
+  width: 35%;
+  border-radius: 7px;
+  padding: 10px 20px;
+  border: 2px solid darkgrey;
+  box-shadow: 0 -1px 10px 0 rgba(0, 0, 0, 0.75);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.add-form {
+  text-align: center;
+  margin-top: 50px
+}
+
+.add-btn {
+  padding: 8px 30px;
+  background: lightgray;
+  border: 2px solid darkgrey;
+  border-radius: 7px;
+  margin-top: 15px;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.75);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.tasks-list {
+  max-width: 50%;
+  background: whitesmoke;
+  border-radius: 8px;
+  list-style: none;
+  line-height: 25px;
+  padding: 20px;
+  margin: 40px auto 0;
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  visibility: hidden;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Nunito', sans-serif;
+  overflow: fragments;
+}
+
+li.decoration {
+  text-decoration: line-through;
+}
+
+.list-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5px;
+}
+
+.delete-task {
+  background: #0066ff;
+  color: white;
+  padding: 3px 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mark-task {
+  background: #52a449;
+  color: white;
+  padding: 3px 3px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.clear-btn {
+  padding: 8px 30px;
+  background: lightgray;
+  border: 2px solid darkgrey;
+  border-radius: 7px;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  cursor: pointer;
+  box-shadow: 0 -1px 5px 0 rgba(0, 0, 0, 0.75);
+  margin-top: 40px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.clear-wrap {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 1140px) {
+  .title {
+    width: 30%;
+
+    & h2 {
+      transform: rotate(-20deg);
+      left: -80%;
+      top: -60%;
+      font-family: 'Arizonia', cursive;
+      font-size: 45px;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .add {
+    width: 45%;
+  }
+  .tasks-list {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 780px) {
+  .title {
+    width: 40%;
+
+    & h2 {
+      transform: rotate(-20deg);
+      left: -70%;
+      top: -60%;
+      font-size: 35px;
+    }
+  }
+  .search.show {
+    width: 30%;
+  }
+
+  .add {
+    width: 55%;
+  }
+
+  .tasks-list {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    width: 60%;
+
+    & h1 {
+      font-size: 30px;
+    }
+
+    & h2 {
+      transform: rotate(-20deg);
+      left: -30%;
+      top: -120%;
+      font-size: 35px;
+    }
+  }
+  .search.show {
+    width: 40%;
+  }
+  .add {
+    width: 70%;
+  }
+}
+
+@media (max-width: 400px) {
+  .title
+  {
+    & h2 {
+      display: none;
+    }
+  }
+  .search.show {
+    width: 70%;
+  }
+}
+
+

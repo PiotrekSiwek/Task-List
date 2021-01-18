@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>To Do List</title>
+
+    <link rel="stylesheet" href="build/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Fredericka+the+Great&family=Nunito&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/de5f29758e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<main class="container">
+    <div class="search-form">
+        <div class="search-input">
+            <label for="search-task" class="task-finder"></label>
+            <input class="search" type="text" placeholder="search" id="search-task">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="title">
+        <h1>My tasks </h1>
+        <h2>Be sure,</h2>
+        <h2>you won't forget!</h2>
+    </div>
+    <form class="add-form">
+        <div class="add-input">
+            <label for="add-task" class="add-finder"></label>
+            <input class="add" type="text" placeholder="task" id="add-task">
+        </div>
+        <button type="submit" class="add-btn"><i class="fas fa-thumbtack"></i></button>
+    </form>
+    <ul class="tasks-list"></ul>
+    <div class="clear-wrap">
+        <button class="clear-btn"><i class="fas fa-trash-alt"></i></button>
+    </div>
+</main>
+<script src="build/out.js"></script>
+</body>
+</html>
