@@ -5,9 +5,13 @@ tasks to the list. If task is done, you can easily find it, mark over or remove 
 list.
 
 ## Created with:
-- JavaScript (OOP), RWD, Sass, NPM, and Webpack
+- JavaScript (OOP), 
+- RWD,
+- Sass, 
+- NPM, 
+- Webpack
 
-## Instaltion
+## Installation
 - npm i,
 - npm start
 
